@@ -4,6 +4,18 @@ Changes
 dev (master)
 ------------
 
+* urllib3 now respects Retry-After headers on 413, 429, and 503 responses when
+  using the default retry logic. (Pull #955)
+
+* Remove markers from setup.py to assist ancient setuptools versions. (Issue
+  #986)
+
+* ... [Short description of non-trivial change.] (Issue #)
+
+
+1.18 (2016-09-26)
+-----------------
+
 * Fixed incorrect message for IncompleteRead exception. (PR #973)
 
 * Accept ``iPAddress`` subject alternative name fields in TLS certificates.
@@ -12,7 +24,7 @@ dev (master)
 * Fixed consistency of ``HTTPResponse.closed`` between Python 2 and 3.
   (Issue #977)
 
-* ... [Short description of non-trivial change.] (Issue #)
+* Fixed handling of wildcard certificates when using PyOpenSSL. (Issue #979)
 
 
 1.17 (2016-09-06)
